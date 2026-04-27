@@ -10,8 +10,9 @@
       FACTURA {{mostrarLetra(miFactura.tipo)}}<!--llave, llave el objeto.tipo(resuelve mi clase)-->
     </div>
     <div class="info-factura">
-      <p><strong>N°:</strong>00001-{{miFactura.numero}}</p><!--llave, llave el objeto.numero-->
-      <p><strong>Fecha:</strong>30/03/2026</p>
+      <p><strong>N°:</strong>00001-{{miFactura.numero}}</p><!--llave, llave el objeto.numero(para mostrar en el html algo de ts)-->
+      <p><strong>Fecha:</strong>{{miFactura.fecha}}<input type="date" [(ngModel)] ="miFactura.fecha | date"></p>
+      <input type="button"(click)="mostrarFecha()">
     </div>
   </div>
 

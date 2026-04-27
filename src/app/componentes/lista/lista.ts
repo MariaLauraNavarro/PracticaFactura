@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { Factura, TipoFactura } from '../../clases/factura';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-lista',
-  imports: [],
+  imports: [CommonModule,FormsModule],
   templateUrl: './lista.html',
   styleUrl: './lista.css',
 })
@@ -17,7 +19,9 @@ export class Lista {
 
     return valor==TipoFactura.A ? 'A' :valor==TipoFactura.B ? 'B': 'C' ;
   }
+  mostrarFecha(){
+   alert(this.miFactura.fecha);
 
-}
+  }
 
-  
+}  

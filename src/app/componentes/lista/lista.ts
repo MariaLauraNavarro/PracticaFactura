@@ -19,7 +19,8 @@ export class Lista {
 
     return valor==TipoFactura.A ? 'A' :valor==TipoFactura.B ? 'B': 'C' ;
   }
-  mostrarFecha(){
+  agregarDetalle(){
+    this.miFactura.neto+=3500;
    alert(this.miFactura.fecha);
 
   }
